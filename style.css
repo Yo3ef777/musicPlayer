@@ -45,15 +45,41 @@
   flex-direction: column;
 }
 
+.backColor {
+  width: 80%;
+
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid gainsboro;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.playbtn {
+  width: 27%;
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: end;
+}
+
 #img {
-  width: 35%;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  width: 60%;
+  border-radius: 7%;
+  -webkit-border-radius: 7%;
+  -moz-border-radius: 7%;
+  -ms-border-radius: 7%;
+  -o-border-radius: 7%;
   border: 1.5px solid gray;
-  opacity: 0.8;
+  opacity: 0.9;
+  margin-top: 15px;
+  position: relative;
+  right: 30px;
+  box-shadow: 0px 10px 30px rgb(165, 165, 165);
 }
 
 #h1 {
@@ -61,13 +87,15 @@
   font-size: 25px;
   top: 15px;
   display: inline-block;
+  left: 15px;
 }
 
 #h4 {
   position: relative;
   display: inline-block;
   font-size: 15px;
-  top: 10px;
+  top: 14px;
+  left: 15px;
   color: rgba(128, 128, 128, 0.667);
 }
 
@@ -89,12 +117,13 @@ i {
 }
 
 .progress {
-  width: 45%;
+  width: 90%;
   height: 10px;
   position: relative;
-  top: 30px;
+  top: 40px;
   color: aliceblue;
   cursor: pointer;
+  margin-bottom: 100px;
 }
 
 .progress-bar {
@@ -115,52 +144,29 @@ i {
   top: 20px;
 }
 #p {
-  right: 10px;
+  left: 30px;
+  top: 50px;
 }
 
 #p1 {
-  left: 10px;
+  right: 30px;
+  top: 13px;
 }
 @keyframes anim {
   0% {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    box-shadow: 0px 0px 20px rgb(255, 232, 232);
+    box-shadow: 0px 0px 30px rgb(255, 232, 232);
   }
   25% {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    box-shadow: 0px 0px 20px rgb(186, 186, 186);
+    box-shadow: 0px 0px 30px rgb(186, 186, 186);
   }
   50% {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    box-shadow: 0px 0px 20px rgb(255, 218, 218);
+    box-shadow: 0px 0px 30px rgb(255, 218, 218);
   }
   75% {
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    box-shadow: 0px 0px 20px rgb(186, 186, 186);
+    box-shadow: 0px 0px 30px rgb(186, 186, 186);
   }
   100% {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    box-shadow: 0px 0px 20px rgb(255, 218, 218);
+    box-shadow: 0px 0px 30px rgb(255, 218, 218);
   }
 }
 
@@ -322,6 +328,9 @@ i {
     top: -7px;
     font-size: 13px;
   }
+  .bi {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -365,6 +374,12 @@ i {
   .music {
     border: 1px solid rgb(115, 115, 115);
   }
+  .playbtn {
+    width: 50%;
+  }
+  .bi {
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -387,6 +402,12 @@ i {
   .popup {
     left: 130px;
   }
+  .playbtn {
+    width: 38%;
+  }
+  .bi {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 590px) {
@@ -403,6 +424,12 @@ i {
   }
   .ImgElem {
     margin-top: 4px;
+  }
+  .playbtn {
+    width: 50%;
+  }
+  .bi {
+    font-size: 35px;
   }
 }
 
@@ -447,6 +474,15 @@ i {
   #btn3 {
     left: 50px;
   }
+  .playbtn {
+    width: 45%;
+  }
+  .bi {
+    font-size: 30px;
+  }
+  .btn {
+    margin: 0px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -462,7 +498,10 @@ i {
   #next,
   #prev,
   #play {
-    font-size: 33px;
+    font-size: 25px;
+  }
+  .playbtn {
+    width: 50%;
   }
 }
 
@@ -474,16 +513,33 @@ i {
     left: 40px;
   }
   #img {
-    width: 45%;
+    width: 50%;
   }
   .popup {
     margin-left: -33%;
+  }
+  #h1 {
+    font-size: 20px;
+  }
+  #h4 {
+    font-size: 13px;
+  }
+  .progress {
+    width: 96%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .H4Elem {
     font-size: 13px;
+  }
+  #img {
+    width: 65%;
+    right: 20px;
+  }
+  .duration {
+    position: relative;
+    top: 20px;
   }
 }
 @media screen and (max-width: 280px) {
